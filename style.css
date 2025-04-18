@@ -1,4 +1,4 @@
-
+/* 
 a{text-decoration: none;}
 
 .button{padding: 18px 28px;background:#040e63; color: #fff; display: inline-block; font-family: 'Waltograph'; font-size: small;}
@@ -63,7 +63,7 @@ p{line-height: 28px, color #666; font-weight: 600; font-family: 'Shadows_Into_Li
 
 /* !Hero */
 
-.hero{
+/* .hero{
 
     position: relative;
     height: 100vh;
@@ -91,7 +91,7 @@ p{line-height: 28px, color #666; font-weight: 600; font-family: 'Shadows_Into_Li
 
 /* Poster */
 
-.poster{
+/* .poster{
     display: flex;
     height: 60vh;
     border: 1px solid red;
@@ -104,10 +104,10 @@ p{line-height: 28px, color #666; font-weight: 600; font-family: 'Shadows_Into_Li
     height: 100%;
 
 }
-.poster__img img{object-fit: cover;width: 154%; height: 60vh; transform: translate(0%, 0%);}
-.poster__content{width: 35%;padding: 50px;}
+.poster__img img{object-fit:cover;width: 154%; height: 60vh; transform: translate(0%, 0%);}
+.poster__content{width: 35%;padding: 50px;} */
 
-.poster2{
+/* .poster2{
     display:flex;
     height: 60vh;
     border: 1px solid green;
@@ -120,10 +120,10 @@ p{line-height: 28px, color #666; font-weight: 600; font-family: 'Shadows_Into_Li
     border: 1px solid blue;
     width: 20%;
 }
+ */
 
 
-
-#videoback{
+/* #videoback{
     position: absolute;
     top: 0;
     left: 0;
@@ -132,4 +132,201 @@ p{line-height: 28px, color #666; font-weight: 600; font-family: 'Shadows_Into_Li
     z-index: 0;
     transform: translate(-25%, -50%)
 }
+ */ 
 
+ /* FONT */
+@font-face {
+    font-family: 'Waltograph';
+    src: url('waltograph/waltographUI.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Zain';
+    src: url('Zain/Zain-Light.ttf') format('truetype');
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* BUTTON */
+.button {
+    padding: 18px 28px;
+    background: #040e63;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Waltograph';
+    font-size: small;
+    border-radius: 5px;
+}
+
+/* TEXT STYLES */
+p {
+    line-height: 28px;
+    color: black;
+    font-weight: 600;
+    font-size:larger;
+    font-family:'Zain';
+}
+
+
+.intro-text {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'ShadowsIntoLight';
+    color: #fff;
+}
+
+.big-text {
+    font-size: 80px;
+    font-weight: 900;
+    font-family: 'Waltograph';
+    color: white;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    background-color: #040e63;
+    font-family: 'Waltograph';
+    justify-content: flex-start; /* 👈 allinea tutto a sinistra */
+    gap: 40px; /* 👈 spazio tra logo e menu */
+}
+
+.logo img {
+    height: 50px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.menu li a {
+    color: white;
+    padding: 10px;
+    font-size: small;
+    font-family: 'Waltograph';
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Waltograph';
+    text-align: center;
+    overflow: hidden;
+}
+
+#videoback {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 🔥 Riempie l'area senza deformare */
+    z-index: 0;
+    pointer-events: none;
+}
+
+.hero__content {
+    z-index: 1;
+    max-width: 1000px;
+    padding: 30px;
+}
+
+/* POSTER SECTION */
+.poster {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px;
+    gap: 50px;
+    border-bottom: 1px solid #eee;
+}
+
+.poster__img {
+    flex: 1;
+}
+
+.poster__img img {
+    width: 100%;
+    max-width: 250px; /* 👈 più piccola */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 200 auto;
+    display: block;
+}
+.poster__content {
+    flex: 1;
+    font-family: 'Waltograph';
+    color: #040e63;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        height: auto;
+        padding: 80px 20px 40px;
+    }
+
+    .big-text {
+        font-size: 40px;
+    }
+
+    .poster {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .poster__img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .poster__content {
+        padding-top: 20px;
+    }
+}

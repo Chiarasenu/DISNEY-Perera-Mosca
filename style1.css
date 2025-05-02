@@ -1,0 +1,32 @@
+.poster1 {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 0 100px 0; /* 👈 padding solo sopra e sotto */
+    gap: 50px;
+    border-bottom: 1px solid #eee;
+    justify-content: flex-start; /* 👈 forza l'allineamento a sinistra */
+}
+
+.poster1__img {
+    flex: 0;
+    margin-left: 20; /* 👈 per sicurezza */
+    margin-top: 150;
+}
+
+.poster1__img img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: 0; /* 👈 elimina margini auto */
+}
+
+.poster1__content {
+    flex: 1;
+    font-family: 'Waltograph', sans-serif;
+    color: #040e63;
+    margin-left: 10; /* 👈 allinea tutto a sinistra */
+}
+

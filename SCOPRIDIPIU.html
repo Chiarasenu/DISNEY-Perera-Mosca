@@ -133,7 +133,7 @@
         if (!r) return alert("Rispondi a tutte le domande!");
         risposte.push(r.value);
       }
-      const conteggio = { "Mamá Imelda": 0, "Miguel": 0, "Héctor": 0, "Dante": 0 };
+      const conteggio = { Mamá : 0, Miguel: 0, Héctor: 0, Dante: 0 };
       risposte.forEach(p => conteggio[p]++);
       const personaggio = Object.keys(conteggio).reduce((a, b) => conteggio[a] > conteggio[b] ? a : b);
       document.getElementById("risultato").innerText = "🎉 Sei " + personaggio + "!";
@@ -203,7 +203,7 @@
 
 
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -311,7 +311,7 @@
 
 
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -361,7 +361,7 @@
 
 
 
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">

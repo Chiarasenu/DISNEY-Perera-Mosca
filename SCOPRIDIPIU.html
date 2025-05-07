@@ -21,6 +21,77 @@
         </nav>
 
     </header>
+
+    <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title style = "margin-top: 100px">Che personaggio di Inside Out sei?</title>
+</head>
+<body>
+
+  <h1 style = "margin-top: 45px">Che personaggio di Inside Out sei?</h1>
+
+  <form id="quizForm">
+    <p>1. Come ti senti più spesso?</p>
+    <input type="radio" name="q1" value="Gioia"> Felice<br>
+    <input type="radio" name="q1" value="Tristezza"> Triste<br>
+    <input type="radio" name="q1" value="Rabbia"> Arrabbiato<br>
+    <input type="radio" name="q1" value="Paura"> Ansioso<br>
+    <input type="radio" name="q1" value="Disgusto"> Schizzinoso<br>
+
+    <p>2. Cosa preferisci mangiare?</p>
+    <input type="radio" name="q2" value="Disgusto"> Solo cose sane<br>
+    <input type="radio" name="q2" value="Gioia"> Dolci<br>
+    <input type="radio" name="q2" value="Rabbia"> Cibo piccante<br>
+    <input type="radio" name="q2" value="Tristezza"> Gelato<br>
+    <input type="radio" name="q2" value="Paura"> Qualcosa di sicuro<br>
+
+    <p>3. Cosa fai in una situazione difficile?</p>
+    <input type="radio" name="q3" value="Paura"> Mi preoccupo<br>
+    <input type="radio" name="q3" value="Gioia"> Trovo il lato positivo<br>
+    <input type="radio" name="q3" value="Tristezza"> Penso al peggio<br>
+    <input type="radio" name="q3" value="Rabbia"> Mi arrabbio<br>
+    <input type="radio" name="q3" value="Disgusto"> Mi tiro indietro<br>
+
+    <p>4. Qual è il tuo colore preferito?</p>
+    <input type="radio" name="q4" value="Gioia"> Giallo<br>
+    <input type="radio" name="q4" value="Tristezza"> Blu<br>
+    <input type="radio" name="q4" value="Rabbia"> Rosso<br>
+    <input type="radio" name="q4" value="Paura"> Viola<br>
+    <input type="radio" name="q4" value="Disgusto"> Verde<br>
+
+    <br>
+    <button type="button" onclick="mostraRisultato()">Scopri chi sei</button>
+  </form>
+
+  <h2 id="risultato"></h2>
+
+  <script>
+    function mostraRisultato() {
+      const risposte = [];
+      for (let i = 1; i <= 4; i++) {
+        const risposta = document.querySelector('input[name="q' + i + '"]:checked');
+        if (!risposta) {
+          alert("Rispondi a tutte le domande!");
+          return;
+        }
+        risposte.push(risposta.value);
+      }
+
+      const conteggio = { Gioia: 0, Tristezza: 0, Rabbia: 0, Paura: 0, Disgusto: 0 };
+      risposte.forEach(p => conteggio[p]++);
+
+      const personaggio = Object.keys(conteggio).reduce((a, b) =>
+        conteggio[a] > conteggio[b] ? a : b
+      );
+
+      document.getElementById("risultato").innerText = "🎉 Sei " + personaggio + "!";
+    }
+  </script>
+</body>
+</html>
+
 </body>
 </html>
 

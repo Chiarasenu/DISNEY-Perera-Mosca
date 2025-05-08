@@ -15,7 +15,7 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="PAGINA-PRINC.html">Home</a></li>
                 <li><a href="Film.html">Film</a></li>
                 <li><a href="GIOCACONNOI.html">Gioca con noi</a></li>
                 <li><a href = "SCOPRIDIPIU.html">Scopri di più</a></li>
@@ -27,7 +27,7 @@
 
          <!-- QUIZ INSIDE OUT -->
          <h1>Che personaggio di Inside Out sei?</h1>
-         <form onsubmit="mostraRisultato(this, 4); return false;">
+         <form onsubmit="mostraRisultato(this, 1); return false;">
            <p>1. Come ti senti più spesso?</p>
            <input type="radio" name="q1" value="Gioia"> Felice<br>
            <input type="radio" name="q1" value="Tristezza"> Triste<br>
@@ -68,7 +68,7 @@
        
            <!-- QUIZ COCO -->
            <h1>Che personaggio di Coco sei?</h1>
-           <form onsubmit="mostraRisultato(this, 3); return false;">
+           <form onsubmit="mostraRisultato(this, 2); return false;">
              <p>1. Cosa ti appassiona di più?</p>
              <input type="radio" name="q1" value="Miguel"> La musica<br>
              <input type="radio" name="q1" value="Héctor"> Stare con la famiglia<br>
@@ -96,7 +96,7 @@
    
            <!-- QUIZ FROZEN -->
            <h1>Che personaggio di Frozen sei?</h1>
-           <form onsubmit="mostraRisultato(this, 2); return false;">
+           <form onsubmit="mostraRisultato(this, 3); return false;">
              <p>1. Come reagisci quando le cose vanno male?</p>
              <input type="radio" name="q1" value="Elsa"> Mi isolo per riflettere<br>
              <input type="radio" name="q1" value="Anna"> Cerco conforto negli altri<br>
@@ -124,7 +124,7 @@
    
             <!-- QUIZ LUCA -->
            <h1>Che personaggio di Luca sei?</h1>
-           <form onsubmit="mostraRisultato(this, 1); return false;">
+           <form onsubmit="mostraRisultato(this, 4); return false;">
              <p>1. Cosa ti descrive meglio?</p>
              <input type="radio" name="q1" value="Luca"> Curioso e sognatore<br>
              <input type="radio" name="q1" value="Alberto"> Avventuroso e impulsivo<br>
@@ -295,7 +295,7 @@
    
                    <!-- QUIZ SOUL -->
            <h1>Che personaggio di Soul sei?</h1>
-           <form onsubmit="mostraRisultato(this, 3); return false;">
+           <form onsubmit="mostraRisultato(this, 10); return false;">
              <p>1. Cosa dà senso alla tua vita?</p>
              <input type="radio" name="q1" value="Joe"> La mia passione<br>
              <input type="radio" name="q1" value="22"> Ancora lo sto cercando<br>
@@ -323,7 +323,7 @@
    
            <!-- QUIZ DUMBO -->
            <h1>Che personaggio di Dumbo sei?</h1>
-           <form onsubmit="mostraRisultato(this, 3); return false;">
+           <form onsubmit="mostraRisultato(this, 11); return false;">
              <p>1. Come reagisci quando ti prendono in giro?</p>
              <input type="radio" name="q1" value="Dumbo"> Rimango in silenzio ma dimostro il mio valore<br>
              <input type="radio" name="q1" value="Timothy"> Difendo i miei amici<br>
@@ -371,7 +371,7 @@
              );
        
              const risultatoElement = form.querySelector('.risultato');
-             risultatoElement.innerText = "🎉 Sei " + personaggio + "!";
+             risultatoElement.innerText = "sei " + personaggio + "!!!";
            }
          </script>
    

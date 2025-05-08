@@ -29,9 +29,6 @@ a {
 }
 
 
-
-
-
 /* BUTTON */
 button {
     padding: 18px 28px;
@@ -85,7 +82,8 @@ h6{
     padding: 20px 40px;
     display: flex;
     align-items: center;
-    background-color: #040e63;
+    /* background-color: #040e63; */
+    background: linear-gradient(to right, #00b3ff,  #040e63, #00b3ff);
     font-family: 'Waltograph';
     justify-content: flex-start; /* 👈 allinea tutto a sinistra */
     gap: 40px; /* 👈 spazio tra logo e menu */
@@ -164,7 +162,7 @@ h6{
     align-items: center;
     padding: 40px;
     gap: 50px;
-    border-bottom: 1px solid #eee;
+    /* border-bottom: 1px solid #eee; */
 }
 
 .poster__img {
@@ -173,11 +171,12 @@ h6{
 
 .poster__img img {
     width: 100%;
-    max-width: 250px; /* 👈 più piccola */
+    max-width: 270px; /* 👈 più piccola */
     height: auto;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     object-fit: cover;
-    margin: 200 auto;
+    margin-left: -30px;
+    margin-top: 50px;
     display: block;
 }
 .poster__content {
@@ -185,6 +184,7 @@ h6{
     font-family: 'Waltograph';
     color: #040e63;
 }
+
 
 
 
@@ -296,7 +296,8 @@ h6{
 
 
 h1{
-    margin-top: 110px;
+    margin-top: 0;
+    padding-top: 0;
     color: #040e63;
     margin-left: 380px;
     font-family: 'Waltograph';
@@ -307,11 +308,42 @@ h1{
 
 input{
     margin-left: 380px;
-
     font-family: 'Waltograph';
 
 }
 
 h2{
     margin-left: 380px;
+}
+
+
+.block{
+    margin-top: -380px;
+    margin-left: 0px;
+}
+
+/* hr{
+    margin-top: 150px;
+    height: 10px;
+    background: linear-gradient(to right, #00b3ff,  #040e63, #00b3ff);
+    margin: 40px 0;
+    border-radius: 2px;
+} */
+
+@keyframes drawLine {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+hr {
+    border: 0;
+    height: 4px;
+    background: linear-gradient(to right, #00b3ff,  #040e63, #00b3ff);
+    width: 0;
+    animation: drawLine 2s ease-out forwards;
+    margin: 30px auto;
 }

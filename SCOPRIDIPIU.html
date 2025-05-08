@@ -1,27 +1,134 @@
+
+
+    <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scopri di più</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <link rel="stylesheet" href="style2.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disney - Film in uscita 2026</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: white;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 100%;
+      height: 80vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      height: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .slide1 { background-image: url('img/elio2025.jpg'); }
+    .slide2 { background-image: url('img/avatar2025.jpg'); }
+    .slide3 { background-image: url('img/thunderbolts2025.jpeg'); }
+    .slide4 { background-image: url('img/zootropolis2025.jpeg'); }
+    .slide5 { background-image: url('img/lilo_stitch.jpg'); }
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 20px;
+      cursor: pointer;
+      font-size: 24px;
+      z-index: 1;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+  </style>
 </head>
 <body>
-    <header class="header">
 
-        <div class="logo">
-            <img src="img/logo header disney-2.png" alt="Logo Disney">
-        </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="PAGINA-PRINC.html">Home</a></li>
-                <li><a href="Film.html">Film</a></li>
-                <li><a href="GIOCACONNOI.html">Gioca con noi</a></li>
-                <li><a href = "SCOPRIDIPIU.html">Scopri di più</a></li>
-            </ul>
-        </nav>
+  <h1 style="text-align: center; padding: 20px;">Film Disney in Uscita - 2026</h1>
 
-    </header>
+  <div class="slider">
+    <div class="slides">
+      <div class="slide slide1"></div>
+      <div class="slide slide2"></div>
+      <div class="slide slide3"></div>
+    </div>
+    <button class="nav-button prev">&#10094;</button>
+    <button class="nav-button next">&#10095;</button>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+    let interval;
+
+    function goToSlide(index) {
+      if (index < 0) index = slideCount - 1;
+      if (index >= slideCount) index = 0;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    function startSlider() {
+      interval = setInterval(nextSlide, 5000);
+    }
+
+    function stopSlider() {
+      clearInterval(interval);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      stopSlider();
+      nextSlide();
+      startSlider();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      stopSlider();
+      prevSlide();
+      startSlider();
+    });
+
+    startSlider();
+  </script>
+
+</body>
+</html>
 
 

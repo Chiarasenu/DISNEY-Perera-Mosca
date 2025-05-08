@@ -24,6 +24,116 @@
 
     </header>
 
+
+
+
+    <!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Film in Uscita 2025</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+    .carousel {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+    .slides {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      transition: transform 1s ease-in-out;
+    }
+    .slides img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .nav {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.3);
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+#prev {
+  left: 0; /* tutto a sinistra */
+}
+#next {
+  right: 0; /* tutto a destra */
+}
+
+    .nav button:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <div class="slides">
+      <img src="https://via.placeholder.com/1920x1080?text=Mickey+17" alt="Mickey 17">
+      <img src="https://via.placeholder.com/1920x1080?text=Mission+Impossible+8" alt="Mission Impossible 8">
+      <img src="https://via.placeholder.com/1920x1080?text=Jurassic+World+La+Rinascita" alt="Jurassic World La Rinascita">
+      <img src="https://via.placeholder.com/1920x1080?text=Biancaneve" alt="Biancaneve">
+      <img src="https://via.placeholder.com/1920x1080?text=Elio" alt="Elio">
+    </div>
+    <div class="nav">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const prev = document.getElementById('prev');
+    const next = document.getElementById('next');
+
+    let index = 0;
+
+    function showSlide(i) {
+      index = (i + images.length) % images.length;
+      slides.style.transform = `translateX(${-index * 100}vw)`;
+    }
+
+    prev.addEventListener('click', () => {
+      showSlide(index - 1);
+    });
+
+    next.addEventListener('click', () => {
+      showSlide(index + 1);
+    });
+
+    setInterval(() => {
+      showSlide(index + 1);
+    }, 5000);
+  </script>
+
+</body>
+</html>
+
+
 <<<<<<< HEAD:SCOPRIDIPIU.html
     
  

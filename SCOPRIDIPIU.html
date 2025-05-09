@@ -1,11 +1,128 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopri di più</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <img src="img/logo header disney-2.png" alt="Logo Disney">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="PAGINA-PRINC.html">Home</a></li>
+                <li><a href="Film.html">Film</a></li>
+                <li><a href = "SCOPRIDIPIU.html">Scopri di più</a></li>
+                <li><a href = "GIOCA.html">Gioca</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
 
 
+    <h1 class="h1">Film Disney in Uscita 2026</h1>
+
+    <!-- SLIDER -->
+    <div class="slider">
+      <div class="slides">
+        <div class="slide slide1"></div>
+        <div class="slide slide2"></div>
+        <div class="slide slide3"></div>
+        <div class="slide slide4"></div>
+        <div class="slide slide5"></div>
+      </div>
+      <button class="nav-button prev">&#10094;</button>
+      <button class="nav-button next">&#10095;</button>
+    </div>
+  
+    <!-- SCRIPT -->
+    <script>
+      const slides = document.querySelector('.slides');
+      const slideCount = document.querySelectorAll('.slide').length;
+      const prevBtn = document.querySelector('.prev');
+      const nextBtn = document.querySelector('.next');
+      let currentIndex = 0;
+      let interval;
+  
+      function goToSlide(index) {
+        if (index < 0) index = slideCount - 1;
+        if (index >= slideCount) index = 0;
+        slides.style.transform = `translateX(-${index * 100}%)`;
+        currentIndex = index;
+      }
+  
+      function nextSlide() {
+        goToSlide(currentIndex + 1);
+      }
+  
+      function prevSlide() {
+        goToSlide(currentIndex - 1);
+      }
+  
+      function startSlider() {
+        interval = setInterval(nextSlide, 5000);
+      }
+  
+      function stopSlider() {
+        clearInterval(interval);
+      }
+  
+      nextBtn.addEventListener('click', () => {
+        stopSlider();
+        nextSlide();
+        startSlider();
+      });
+  
+      prevBtn.addEventListener('click', () => {
+        stopSlider();
+        prevSlide();
+        startSlider();
+      });
+  
+      startSlider();
+    </script>
+
+
+   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
     <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Disney - Film in uscita 2026</title>
+  
   <style>
     * {
       box-sizing: border-box;
@@ -135,4 +252,4 @@
 </body>
 </html>
 
-
+ -->

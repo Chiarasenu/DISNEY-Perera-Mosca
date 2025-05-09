@@ -296,7 +296,7 @@ h6{
 
 .h1{
     margin-top: 110px;
-    margin-left: 550px;
+    margin-left: 530px;
     font-family: 'Waltograph';
     color: #040e63;
     font-size: 25px;
@@ -421,6 +421,101 @@ h2{
 
 
 
+/* scopridipiù */
+
+.slider {
+    width: 100vw;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  /* Righe di slide */
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  /* Singola slide: una alla volta centrata, immagine contenuta */
+  .slide {
+    min-width: 100vw;
+    height: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  
+  /* Bottoni sinistra/destra ai margini */
+  .slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .slider-button.left {
+    left: 0;
+  }
+  
+  .slider-button.right {
+    right: 0;
+  }
+  .slide1 { background-image: url('img/elio2025.jpg'); }
+  .slide2 { background-image: url('img/avatar2025.jpg'); }
+  .slide3 { background-image: url('img/thunderbolts2025.jpeg'); }
+  .slide4 { background-image: url('img/zootropolis2025.jpeg'); }
+  .slide5 { background-image: url('img/lilo_stitch.jpg'); }
+
+  .nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 5;
+    transition: background-color 0.3s;
+  }
+
+  .nav-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  .prev {
+    left: -380px; /* Puoi aumentare questo valore anche a 40px, 50px, ecc. */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  
+  .next {
+    right: 0px; /* Anche qui puoi aumentare per spostare più a destra */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  h1.title-slider {
+    margin-top: 120px;
+    margin-left: 380px;
+    font-family: 'Waltograph';
+    color: #040e63;
+  }
 
 
 

@@ -294,6 +294,15 @@ h6{
 }
 
 
+.h1{
+    margin-top: 110px;
+    margin-left: 550px;
+    font-family: 'Waltograph';
+    color: #040e63;
+    font-size: 25px;
+
+}   
+
 
 h1{
     margin-top: 0;
@@ -339,11 +348,75 @@ h2{
     }
 }
 
-hr {
+/* hr {
     border: 0;
     height: 4px;
     background: linear-gradient(to right, #00b3ff,  #040e63, #00b3ff);
     width: 0;
     animation: drawLine 2s ease-out forwards;
     margin: 30px auto;
-}
+} */
+
+
+/* stella */
+
+.stella-btn {
+    width: 450px;
+    aspect-ratio: 1;
+    clip-path: polygon(
+      50% 0%, 61% 35%, 98% 35%, 68% 57%,
+      79% 91%, 50% 70%, 21% 91%, 32% 57%,
+      2% 35%, 39% 35%
+    );
+    box-shadow: 0 4px 10px rgba(4, 14, 99, 0.3);
+    border: none;
+    color: #040e63;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, filter 0.2s;
+    position: absolute; /* per gestire le posizioni individuali */
+  }
+  
+  /* Effetti hover e click */
+  .stella-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+  .stella-btn:active {
+    transform: scale(0.95);
+  }
+
+  .colore1 { background: linear-gradient(135deg, rgb(253, 72, 0), #ff03d9, lightblue, yellow, rgb(12, 236, 12)); }
+  .colore2{background: linear-gradient(135deg, blue, violet, orange);}
+  .colore3{background: linear-gradient(135deg,  blue,lightblue, rgb(204, 255, 0));}
+  .colore4{background: linear-gradient(135deg, orangered, rgb(255, 255, 157));}
+  .colore5{background: linear-gradient(135deg, blue, rgb(115, 115, 255), white);}
+  .colore6{background: linear-gradient(135deg, rgb(237, 114, 237), rgb(255, 255, 125), rgb(179, 255, 179));}
+  .colore7{background: linear-gradient(135deg, rgb(109, 83, 56), rgb(252, 252, 125));}
+  .colore8{background: linear-gradient(135deg, rgb(94, 67, 67), rgb(169, 167, 167), rgb(97, 97, 203));}
+  .colore9{background: linear-gradient(135deg, rgb(0, 208, 255), orange);}
+  .colore10{background: linear-gradient(135deg, rgb(75, 255, 237), rgb(108, 252, 56), yellow);}
+  .colore11{background: linear-gradient(135deg, rgb(190, 189, 189), rgb(248, 106, 106));}
+  .colore12{background: linear-gradient(135deg, rgb(0, 0, 154), rgb(0, 255, 195));}
+
+
+
+  .pos1 { top: 170px; margin-left: 10px; }
+  .pos2{top: 170px; margin-left: 500px }
+  .pos3{top: 170px; margin-left: 990px }
+  .pos4{top: 700px; margin-left: 10px }
+  .pos5{top: 700px; margin-left: 500px }
+  .pos6{top: 700px; margin-left: 990px }
+  .pos7{top: 1200px; margin-left: 10px }
+  .pos8{top: 1200px; margin-left: 500px }
+  .pos9{top: 1200px; margin-left: 990px }
+  .pos10{top: 1700px; margin-left: 10px }
+  .pos11{top: 1700px; margin-left: 500px }
+  .pos12{top: 1700px; margin-left: 990px }
+
+
+

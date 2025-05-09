@@ -1,0 +1,88 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopri di più</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <img src="img/logo header disney-2.png" alt="Logo Disney">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="PAGINA-PRINC.html">Home</a></li>
+                <li><a href="Film.html">Film</a></li>
+                <li><a href = "SCOPRIDIPIU.html">Scopri di più</a></li>
+                <li><a href = "GIOCA.html">Gioca</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <section class="poster">
+      <div class="poster__img">
+        <img src="img/gioia.jpg" alt="gioia">
+      </div>
+    </section>
+
+<div class = "block">
+    <h1>Che personaggio di Rapunzel sei?</h1>
+    <form onsubmit="mostraRisultato(this, 3); return false;">
+      <p>1. Come reagisci quando ti senti in trappola?</p>
+      <input type="radio" name="q1" value="Rapunzel"> Sogno la libertà e trovo il coraggio di agire<br>
+      <input type="radio" name="q1" value="Madre Gothel"> Cerco di mantenere il controllo<br>
+      <input type="radio" name="q1" value="Flynn Rider"> Cerco una via d’uscita astuta<br>
+      <input type="radio" name="q1" value="Pascal"> Sto vicino a chi ha bisogno<br>
+
+      <p>2. Cosa ti rende felice?</p>
+      <input type="radio" name="q2" value="Rapunzel"> Esplorare il mondo e scoprire cose nuove<br>
+      <input type="radio" name="q2" value="Flynn Rider"> La libertà e un po’ di avventura<br>
+      <input type="radio" name="q2" value="Pascal"> La compagnia degli amici<br>
+      <input type="radio" name="q2" value="Madre Gothel"> Avere tutto sotto controllo<br>
+
+      <p>3. Come ti vedono gli altri?</p>
+      <input type="radio" name="q3" value="Rapunzel"> Dolce ma determinata<br>
+      <input type="radio" name="q3" value="Flynn Rider"> Affascinante ma con un lato tenero<br>
+      <input type="radio" name="q3" value="Madre Gothel"> Protettiva ma autoritaria<br>
+      <input type="radio" name="q3" value="Pascal"> Silenzioso ma leale<br>
+
+      <br>
+      <button type="submit">Scopri chi sei</button>
+      <h2 class="risultato"></h2>
+    </form>
+</div>
+
+<script>
+    function mostraRisultato(form, numeroDomande) {
+      const risposte = [];
+      for (let i = 1; i <= numeroDomande; i++) {
+        const risposta = form.querySelector('input[name="q' + i + '"]:checked');
+        if (!risposta) {
+          alert("Rispondi a tutte le domande!");
+          return;
+        }
+        risposte.push(risposta.value);
+      }
+
+      const conteggio = {};
+      risposte.forEach(val => {
+        conteggio[val] = (conteggio[val] || 0) + 1;
+      });
+
+      const personaggio = Object.keys(conteggio).reduce((a, b) =>
+        conteggio[a] > conteggio[b] ? a : b
+      );
+
+      const risultatoElement = form.querySelector('.risultato');
+      risultatoElement.innerText = "sei " + personaggio + "!!!";
+    }
+  </script>
+
+   
+</body>
+</html>

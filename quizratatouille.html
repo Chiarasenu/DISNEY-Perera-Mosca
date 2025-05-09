@@ -1,0 +1,88 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopri di più</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <img src="img/logo header disney-2.png" alt="Logo Disney">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="PAGINA-PRINC.html">Home</a></li>
+                <li><a href="Film.html">Film</a></li>
+                <li><a href = "SCOPRIDIPIU.html">Scopri di più</a></li>
+                <li><a href = "GIOCA.html">Gioca</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <section class="poster">
+      <div class="poster__img">
+        <img src="img/gioia.jpg" alt="gioia">
+      </div>
+    </section>
+
+<div class = "block">
+    <h1>Che personaggio di Ratatouille sei?</h1>
+    <form onsubmit="mostraRisultato(this, 3); return false;">
+      <p>1. Come ti comporti quando sogni qualcosa di grande?</p>
+      <input type="radio" name="q1" value="Remy"> Seguo la mia passione, anche se è difficile<br>
+      <input type="radio" name="q1" value="Linguini"> Cerco aiuto da chi ne sa più di me<br>
+      <input type="radio" name="q1" value="Colette"> Mi impegno duramente per dimostrare il mio valore<br>
+      <input type="radio" name="q1" value="Skinner"> Proteggo la mia posizione a tutti i costi<br>
+
+      <p>2. Qual è il tuo rapporto con il cibo?</p>
+      <input type="radio" name="q2" value="Remy"> Lo considero un’arte<br>
+      <input type="radio" name="q2" value="Linguini"> Non sono un esperto, ma mi piace mangiare<br>
+      <input type="radio" name="q2" value="Colette"> Mi affido a tecniche e disciplina<br>
+      <input type="radio" name="q2" value="Skinner"> È solo un modo per fare soldi<br>
+
+      <p>3. Come affronti le critiche?</p>
+      <input type="radio" name="q3" value="Remy"> Le accetto se mi aiutano a migliorare<br>
+      <input type="radio" name="q3" value="Linguini"> A volte mi abbattono, ma continuo<br>
+      <input type="radio" name="q3" value="Colette"> Le uso come carburante per dimostrare il contrario<br>
+      <input type="radio" name="q3" value="Skinner"> Le ignoro o mi arrabbio<br>
+
+      <br>
+      <button type="submit">Scopri chi sei</button>
+      <h2 class="risultato"></h2>
+    </form>
+</div>
+
+<script>
+    function mostraRisultato(form, numeroDomande) {
+      const risposte = [];
+      for (let i = 1; i <= numeroDomande; i++) {
+        const risposta = form.querySelector('input[name="q' + i + '"]:checked');
+        if (!risposta) {
+          alert("Rispondi a tutte le domande!");
+          return;
+        }
+        risposte.push(risposta.value);
+      }
+
+      const conteggio = {};
+      risposte.forEach(val => {
+        conteggio[val] = (conteggio[val] || 0) + 1;
+      });
+
+      const personaggio = Object.keys(conteggio).reduce((a, b) =>
+        conteggio[a] > conteggio[b] ? a : b
+      );
+
+      const risultatoElement = form.querySelector('.risultato');
+      risultatoElement.innerText = "sei " + personaggio + "!!!";
+    }
+  </script>
+
+   
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scopri di più</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style2.css">
+
+</head>
+<body>
+    <header class="header">
+
+        <div class="logo">
+            <img src="img/logo header disney-2.png" alt="Logo Disney">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="PAGINA-PRINC.html">Home</a></li>
+                <li><a href="Film.html">Film</a></li>
+                <li><a href = "SCOPRIDIPIU.html">Scopri di più</a></li>
+                <li><a href = "GIOCA.html">Gioca</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <section class="poster">
+      <div class="poster__img">
+        <img src="img/gioia.jpg" alt="gioia">
+      </div>
+    </section>
+
+
+<div class = "block">
+    <h1>Che personaggio di Luca sei?</h1>
+    <form onsubmit="mostraRisultato(this, 3); return false;">
+      <p>1. Cosa ti descrive meglio?</p>
+      <input type="radio" name="q1" value="Luca"> Curioso e sognatore<br>
+      <input type="radio" name="q1" value="Alberto"> Avventuroso e impulsivo<br>
+      <input type="radio" name="q1" value="Giulia"> Determinato e intelligente<br>
+      <input type="radio" name="q1" value="Ercole"> Competitivo e vanitoso<br>
+
+      <p>2. Dove preferiresti stare?</p>
+      <input type="radio" name="q2" value="Luca"> A esplorare il mondo<br>
+      <input type="radio" name="q2" value="Alberto"> In libertà, lontano da regole<br>
+      <input type="radio" name="q2" value="Giulia"> In una biblioteca o scuola<br>
+      <input type="radio" name="q2" value="Ercole"> In mezzo alla folla a vantarmi<br>
+
+      <p>3. Qual è il tuo più grande sogno?</p>
+      <input type="radio" name="q3" value="Luca"> Scoprire cose nuove<br>
+      <input type="radio" name="q3" value="Alberto"> Vivere senza paura<br>
+      <input type="radio" name="q3" value="Giulia"> Imparare e migliorare<br>
+      <input type="radio" name="q3" value="Ercole"> Essere il migliore<br>
+
+      <br>
+      <button type="submit">Scopri chi sei</button>
+      <h2 class="risultato"></h2>
+    </form>
+
+</div>
+
+<script>
+    function mostraRisultato(form, numeroDomande) {
+      const risposte = [];
+      for (let i = 1; i <= numeroDomande; i++) {
+        const risposta = form.querySelector('input[name="q' + i + '"]:checked');
+        if (!risposta) {
+          alert("Rispondi a tutte le domande!");
+          return;
+        }
+        risposte.push(risposta.value);
+      }
+
+      const conteggio = {};
+      risposte.forEach(val => {
+        conteggio[val] = (conteggio[val] || 0) + 1;
+      });
+
+      const personaggio = Object.keys(conteggio).reduce((a, b) =>
+        conteggio[a] > conteggio[b] ? a : b
+      );
+
+      const risultatoElement = form.querySelector('.risultato');
+      risultatoElement.innerText = "sei " + personaggio + "!!!";
+    }
+  </script>
+
+   
+</body>
+</html>
+

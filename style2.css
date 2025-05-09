@@ -355,6 +355,7 @@ h2{
     width: 0;
     animation: drawLine 2s ease-out forwards;
     margin: 30px auto;
+
 } */
 
 
@@ -417,6 +418,9 @@ h2{
   .pos10{top: 1700px; margin-left: 10px }
   .pos11{top: 1700px; margin-left: 500px }
   .pos12{top: 1700px; margin-left: 990px }
+
+
+
 
 
 

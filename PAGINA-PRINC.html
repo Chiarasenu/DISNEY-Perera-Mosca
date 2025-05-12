@@ -17,10 +17,9 @@
         <nav class="menu">
             <ul>
                 <li><a href="#">Home</a></li>
-                <li><a href="Film.html">Film</a></li>
+                <li><a href="FILM.html">Film</a></li>
                 <li><a href = "SCOPRIDIPIU.html">Scopri di più</a></li>
                 <li><a href = "GIOCA.html">Gioca</a></li>
-
 
             </ul>
         </nav>
@@ -37,15 +36,67 @@
             <a href="https://www.disney.it/" class="button">Scopri di più</a>
         </div>
     </section>
+    <section class="poster hidden-on-scroll">
 
-    <section class="singola-casella">
-        <div class="box">
-          <h2>Benvenuto!</h2>
-          <p>Questa è una casella grande dove puoi inserire qualsiasi contenuto: testo, immagini, bottoni, icone e molto altro.</p>
-          <button class ="button">Cliccami</button>
-        </div>
+      <!-- SCRITTA GRANDE CENTRATA CON LINK -->
+      <section class="scritta-linkata">
+        <h1><a href="#immagini-sfalsate">SCOPRI L'ARTE DELLA WALT DISNEY</a></h1>
       </section>
 
+
+    
+      <!-- CONTENITORE IMMAGINI E TESTO -->
+       
+      <div class="poster__content">
+        <div class="poster__img">
+          <section class="triple-image-container" id="immagini-sfalsate">
+            <img src="img/bozzetto.jpg" alt="Immagine 1" class="img-top">
+            <img src="img/topolinobozz.jpg" alt="Immagine 2" class="img-middle">
+            <img src="img/bozzettonani.jpg" alt="Immagine 3" class="img-bottom">
+          </section>
+        </div>
+      
+    
+        <div class="poster__text">
+          <h2>"Se puoi sognarlo, puoi farlo":</h2>
+          <p>
+            Questo è uno dei suoi aforismi più famosi, perfetto per incoraggiare a perseguire i propri obiettivi, senza farsi scoraggiare dai dubbi o dalle difficoltà.
+          </p>
+    
+          <div style="height: 50px;"></div>
+    
+          <h2>"L'unica cosa che ci limita è la nostra fantasia":</h2>
+          <p>
+            Questa frase, sebbene non sia stata pronunciata letteralmente da Walt Disney, riflette bene la sua visione del mondo, dove la creatività e la capacità di sognare sono fondamentali.
+          </p>
+    
+          <div style="height: 50px;"></div>
+    
+          <h2>"I nostri sogni sono importanti per la nostra vita. Quando i nostri sogni diventano realtà, possiamo rendere il mondo un posto migliore":</h2>
+          <p>
+            Questa frase sottolinea l'importanza di perseguire i propri sogni e di utilizzarli come un motore per migliorare la società.
+          </p>
+        </div>
+      </div>
+    
+    </section>
+    
+    <!-- ALTRA SEZIONE -->
+    <section class="poster hidden-on-scroll">
+      <div class="poster__content">
+        <div class="poster__img">
+          <section class="triple-image-container" id="immagini-sfalsate">
+            <img src="img/creatore2disney.jpg" alt="Immagine 1" class="img-top">
+            <img src="img/disneystor.jpg" alt="Immagine 2" class="img-middle">
+            <img src="img/creatoredisney.webp" alt="Immagine 3" class="img-bottom">
+          </section>
+        </div>
+      <div class="poster__text">
+        <h2>IL CREATORE...</h2>
+        <p>Walter Elias Disney, per tutti Walt Disney, nasce a Chicago, nel 1905 e cresce in una fattoria del Missouri. Un’infanzia non facile, quarto di cinque fratelli, contribuisce alla vita familiare aiutando il padre, prima nel lavoro nei campi e poi, dopo il trasferimento a Kansas City, nella consegna di giornali. Già a sette anni vende i suoi schizzi ai vicini, mostrando doti fuori dal comune. La svolta a diciotto anni, quando si trasferisce ad Hollywood con il fratello Roy, in cerca di fortuna. In pochi anni riesce a raggiungere il successo con la realizzazione di serie di fumetti, Alice in cartoonland, Oswald in the lucky rabbit e soprattutto con la serie di storie dedicate a Mickey Mouse, con la quale realizza poi tra mille difficoltà il primo cartone animato sonoro, nel 1928. Nel 1929 crea la Walt Disney Entreprises, per gestire l’uso delle proprie creazioni su prodotti derivati. Da qui in poi si susseguono nuove produzioni, come il primo cartone animato a colori, il cortometraggio Flowers and trees, fino al 1937, quando realizza il primo lungometraggio d’animazione Snow White and the seven dwarfs, conosciuto in Italia come Biancaneve e i sette nani, a cui segue nel 1940 Pinocchio.</p>
+    </div>
+      </div>
+    </section>
 
 
 
@@ -82,6 +133,21 @@
         </p>
       </footer>
 
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+              }
+            });
+          }, { threshold: 0.2 });
+      
+          document.querySelectorAll('.hidden-on-scroll').forEach(el => {
+            observer.observe(el);
+          });
+        });
+      </script>
 
 </body>
 </html>

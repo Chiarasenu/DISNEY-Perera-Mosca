@@ -308,6 +308,57 @@ h6{
     .poster__content {
         padding-top: 20px;
     }
+
+    .footer {
+      background-color: #040e63;
+      padding: 40px 20px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+    
+    .footer-top p {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 22px;
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-logo img {
+      margin: 30px auto;
+      max-width: 100px;
+    }
+    
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      font-size: 14px;
+    }
+    
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+    }
+    
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    
+    .footer p.copyright {
+      margin-top: 20px;
+      font-size: 13px;
+      color: white;
+    }
 }
 
 

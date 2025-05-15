@@ -1,15 +1,15 @@
 .poster1 {
     display: flex;
     flex-wrap: wrap;
-    padding: 0px 0 100px 0; /* 👈 padding solo sopra e sotto */
+    padding: 0px 0 100px 0; 
     gap: 50px;
     border-bottom: 1px solid #eee;
-    justify-content: flex-start; /* 👈 forza l'allineamento a sinistra */
+    justify-content: flex-start; 
 }
 
 .poster1__img {
     flex: 0;
-    margin-left: 20; /* 👈 per sicurezza */
+    margin-left: 20;
     margin-top: 150;
 }
 
@@ -20,17 +20,17 @@
     border-radius: 10px;
     object-fit: cover;
     display: block;
-    margin: 0; /* 👈 elimina margini auto */
+    margin: 0;
 }
 
 .poster1__content {
     flex: 1;
     font-family: 'Waltograph', sans-serif;
     color: #040e63;
-    margin-left: 10; /* 👈 allinea tutto a sinistra */
+    margin-left: 10; 
 }
 
- /* FONT */
+
  @font-face {
     font-family: 'Waltograph';
     src: url('waltograph/waltographUI.ttf') format('truetype');
@@ -42,7 +42,6 @@
 }
 
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -60,14 +59,8 @@ a {
     color: #fff;
 }
 
-
-
-
-
-/* BUTTON */
 .button {
     padding: 18px 28px;
-    /* background: #040e63; */
     animation: rainbow 4s infinite;
     color: #fff;
     display: inline-block;
@@ -76,7 +69,7 @@ a {
     border-radius: 5px;
 }
 
-/* TEXT STYLES */
+
 p {
     line-height: 28px;
     color: black;
@@ -104,7 +97,6 @@ h6{
     color: white;
 }
 
-/* HEADER */
 .header {
     width: 100%;
     position: fixed;
@@ -116,24 +108,9 @@ h6{
     align-items: center;
     background-color: #040e63;
     font-family: 'Waltograph';
-    justify-content: flex-start; /* 👈 allinea tutto a sinistra */
-    gap: 40px; /* 👈 spazio tra logo e menu */
+    justify-content: flex-start; 
+    gap: 40px; 
 }
-
-/* .footer{
-    width: 100%;
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    background-color: #040e63;
-    font-family: 'Zain';
-    justify-content: flex-start; /* 👈 allinea tutto a sinistra */
-    /* gap: 40px; 👈 spazio tra logo e menu */
-/* } */ 
 
 .p{
     color: white;
@@ -191,10 +168,6 @@ h6{
     color: white;
   }
 
-
-
-
-
 .logo img {
     height: 50px;
 }
@@ -217,7 +190,6 @@ h6{
     font-family: 'Waltograph';
 }
 
-/* HERO */
 .hero {
     position: relative;
     height: 100vh;
@@ -235,7 +207,7 @@ h6{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 🔥 Riempie l'area senza deformare */
+    object-fit: cover;
     z-index: 0;
     pointer-events: none;
 }
@@ -246,7 +218,6 @@ h6{
     padding: 30px;
 }
 
-/* POSTER SECTION */
 .poster {
     display: flex;
     flex-wrap: wrap;
@@ -262,7 +233,7 @@ h6{
 
 .poster__img img {
     width: 100%;
-    max-width: 250px; /* 👈 più piccola */
+    max-width: 250px; 
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -322,8 +293,6 @@ h6{
   }
 
 
-
-
   .color-loop {
     padding: 20px;
     border-radius: 12px;
@@ -340,11 +309,6 @@ h6{
     100% { background-color: #a0c4ff; color: black; }
   }
 
-
-
-
-
-/* MEDIA QUERIES */
 @media (max-width: 768px) {
 
     .header {

@@ -1,4 +1,4 @@
- /* FONT */
+
  @font-face {
     font-family: 'Waltograph';
     src: url('waltograph/waltographUI.ttf') format('truetype');
@@ -9,8 +9,6 @@
     src: url('Zain/Zain-Light.ttf') format('truetype');
 }
 
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -28,11 +26,8 @@ a {
     color: #fff;
 }
 
-
-/* BUTTON */
 button {
     padding: 18px 28px;
-    /* background: #040e63; */
     animation: rainbow 4s infinite;
     color: #fff;
     display: inline-block;
@@ -42,7 +37,6 @@ button {
     margin-left: 380px;
 }
 
-/* TEXT STYLES */
 p {
     line-height: 28px;
     color: black;
@@ -72,7 +66,7 @@ h6{
     color: white;
 }
 
-/* HEADER */
+
 .header {
     width: 100%;
     position: fixed;
@@ -82,11 +76,10 @@ h6{
     padding: 20px 40px;
     display: flex;
     align-items: center;
-    /* background-color: #040e63; */
     background: linear-gradient(to right, #00b3ff,  #040e63, #00b3ff);
     font-family: 'Waltograph';
-    justify-content: flex-start; /* 👈 allinea tutto a sinistra */
-    gap: 40px; /* 👈 spazio tra logo e menu */
+    justify-content: flex-start;
+    gap: 40px;
 }
 
 .footer{
@@ -100,8 +93,8 @@ h6{
     align-items: center;
     background-color: #040e63;
     font-family: 'Zain';
-    justify-content: flex-start; /* 👈 allinea tutto a sinistra */
-    gap: 40px; /* 👈 spazio tra logo e menu */
+    justify-content: flex-start; 
+    gap: 40px;
 }
 
 .logo img {
@@ -126,7 +119,7 @@ h6{
     font-family: 'Waltograph';
 }
 
-/* HERO */
+
 .hero {
     position: relative;
     height: 100vh;
@@ -144,7 +137,7 @@ h6{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 🔥 Riempie l'area senza deformare */
+    object-fit: cover; 
     z-index: 0;
     pointer-events: none;
 }
@@ -155,14 +148,14 @@ h6{
     padding: 30px;
 }
 
-/* POSTER SECTION */
+
 .poster {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 40px;
     gap: 50px;
-    /* border-bottom: 1px solid #eee; */
+   
 }
 
 .poster__img {
@@ -171,9 +164,8 @@ h6{
 
 .poster__img img {
     width: 100%;
-    max-width: 270px; /* 👈 più piccola */
+    max-width: 270px;
     height: auto;
-    /* border-radius: 10px; */
     object-fit: cover;
     margin-left: -30px;
     margin-top: 50px;
@@ -251,11 +243,6 @@ h6{
     100% { background-color: #a0c4ff; color: black; }
   }
 
-
-
-
-
-/* MEDIA QUERIES */
 @media (max-width: 768px) {
 
     .header {
@@ -331,13 +318,6 @@ h2{
     margin-left: 0px;
 }
 
-/* hr{
-    margin-top: 150px;
-    height: 10px;
-    background: linear-gradient(to right, #00b3ff,  #040e63, #00b3ff);
-    margin: 40px 0;
-    border-radius: 2px;
-} */
 
 @keyframes drawLine {
     from {
@@ -348,18 +328,6 @@ h2{
     }
 }
 
-/* hr {
-    border: 0;
-    height: 4px;
-    background: linear-gradient(to right, #00b3ff,  #040e63, #00b3ff);
-    width: 0;
-    animation: drawLine 2s ease-out forwards;
-    margin: 30px auto;
-
-} */
-
-
-/* stella */
 
 .stella-btn {
     width: 450px;
@@ -379,10 +347,9 @@ h2{
     align-items: center;
     justify-content: center;
     transition: transform 0.2s, filter 0.2s;
-    position: absolute; /* per gestire le posizioni individuali */
+    position: absolute; 
   }
   
-  /* Effetti hover e click */
   .stella-btn:hover {
     transform: scale(1.05);
     filter: brightness(1.1);
@@ -421,8 +388,6 @@ h2{
 
 
 
-/* scopridipiù */
-
 .slider {
     width: 100vw;
     height: 80vh;
@@ -431,14 +396,12 @@ h2{
     margin: 0 auto;
   }
   
-  /* Righe di slide */
   .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
     height: 100%;
   }
   
-  /* Singola slide: una alla volta centrata, immagine contenuta */
   .slide {
     min-width: 100vw;
     height: 100%;
@@ -452,7 +415,6 @@ h2{
   }
 
   
-  /* Bottoni sinistra/destra ai margini */
   .slider-button {
     position: absolute;
     top: 50%;
@@ -496,7 +458,7 @@ h2{
     background-color: rgba(255, 255, 255, 0.2);
   }
   .prev {
-    left: -380px; /* Puoi aumentare questo valore anche a 40px, 50px, ecc. */
+    left: -380px; 
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -504,7 +466,7 @@ h2{
   }
   
   .next {
-    right: 0px; /* Anche qui puoi aumentare per spostare più a destra */
+    right: 0px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

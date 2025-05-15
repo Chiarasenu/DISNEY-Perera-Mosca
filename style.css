@@ -1,5 +1,4 @@
 
- /* FONT */
 @font-face {
     font-family: 'Waltograph';
     src: url('waltograph/waltographUI.ttf') format('truetype');
@@ -10,8 +9,6 @@
     src: url('Zain/Zain-Light.ttf') format('truetype');
 }
 
-
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -29,11 +26,6 @@ a {
     color: #fff;
 }
 
-
-
-
-
-/* BUTTON */
 .button {
     padding: 18px 28px;
     /* background: #040e63; */
@@ -45,7 +37,7 @@ a {
     border-radius: 5px;
 }
 
-/* TEXT STYLES */
+
 p {
     line-height: 28px;
     color: black;
@@ -73,7 +65,7 @@ h6{
     color: white;
 }
 
-/* HEADER */
+
 .header {
     width: 100%;
     position: fixed;
@@ -85,29 +77,12 @@ h6{
     align-items: center;
     background-color: #040e63;
     font-family: 'Waltograph';
-    justify-content: flex-start; /* 👈 allinea tutto a sinistra */
-    gap: 40px; /* 👈 spazio tra logo e menu */
+    justify-content: flex-start;
+    gap: 40px; 
 }
-
-/* .footer{
-    width: 100%;
-    position: fixed;
-    z-index: 10;
-    bottom: 0;
-    left: 0;
-    padding: 20px 40px;
-    display: flex;
-    align-items: center;
-    background-color: #040e63;
-    font-family: 'Zain';
-    justify-content: flex-start; /* 👈 allinea tutto a sinistra */
-    /* gap: 40px; 👈 spazio tra logo e menu */
-/* } */ 
-
 .p{
     color: white;
 }
-
 
 .footer {
     background-color: #040e63;
@@ -160,10 +135,6 @@ h6{
     color: white;
   }
 
-
-
-
-
 .logo img {
     height: 50px;
 }
@@ -186,7 +157,6 @@ h6{
     font-family: 'Waltograph';
 }
 
-/* HERO */
 .hero {
     position: relative;
     height: 100vh;
@@ -204,7 +174,7 @@ h6{
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 🔥 Riempie l'area senza deformare */
+    object-fit: cover; 
     z-index: 0;
     pointer-events: none;
 }
@@ -215,7 +185,6 @@ h6{
     padding: 30px;
 }
 
-/* POSTER SECTION */
 .poster {
     display: flex;
     flex-wrap: wrap;
@@ -231,7 +200,7 @@ h6{
 
 .poster__img img {
     width: 100%;
-    max-width: 250px; /* 👈 più piccola */
+    max-width: 250px;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
@@ -243,8 +212,6 @@ h6{
     font-family: 'Waltograph';
     color: #040e63;
 }
-
-
 
 .singola-casella {
     display: flex;
@@ -290,9 +257,6 @@ h6{
     background-color: #0056b3;
   }
 
-
-
-
   .color-loop {
     padding: 20px;
     border-radius: 12px;
@@ -309,11 +273,6 @@ h6{
     100% { background-color: #a0c4ff; color: black; }
   }
 
-
-
-
-
-/* MEDIA QUERIES */
 @media (max-width: 768px) {
 
     .header {
@@ -362,11 +321,10 @@ h6{
     opacity: 1;
     transform: translateY(0);
   }
-  
-  /* SCRITTA GRANDE CENTRATA */
+
   .scritta-linkata {
     text-align: center;
-    margin: 200px 0 200px; /* spazio sopra e sotto */
+    margin: 200px 0 200px; 
     margin-left: 30px;
   }
   
@@ -382,7 +340,6 @@ h6{
     color: #007bff;
   }
   
-  /* CONTENITORE IMMAGINI E TESTO */
   .poster__content {
     display: flex;
     align-items: center;
@@ -393,7 +350,7 @@ h6{
   
   .poster__img {
     flex: 1;
-    margin-right: 200px; /* Spazio tra immagine e testo */
+    margin-right: 200px; 
     width: 1000px;
     height: auto;
   }
@@ -418,7 +375,6 @@ h6{
     transition: transform 0.3s ease;
   }
   
-  /* Posizionamento immagini */
   .img-top {
     top: 0;
     left: 10%;

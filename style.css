@@ -273,93 +273,115 @@ h6{
     100% { background-color: #a0c4ff; color: black; }
   }
 
-@media (max-width: 768px) {
 
-    .header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+  @media (max-width: 768px) {
 
-    .menu ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero {
-        height: auto;
-        padding: 80px 20px 40px;
-    }
-
-    .big-text {
-        font-size: 40px;
-    }
-
-    .poster {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .poster__img img {
-        width: 100%;
-        height: auto;
-    }
-
-    .poster__content {
-        padding-top: 20px;
-    }
-
-    .footer {
-      background-color: #040e63;
-      padding: 40px 20px 20px;
+    /* Reset margini rigidi */
+    h1, h2, p, input, button {
+      margin-left: 0 !important;
       text-align: center;
-      font-family: Arial, sans-serif;
-      color: white;
     }
-    
-    .footer-top p {
-      font-weight: bold;
-      margin-bottom: 10px;
+  
+    .h1,
+    h1.title-slider {
+      margin-left: 0 !important;
+      text-align: center;
+      font-size: 24px;
     }
-    
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 22px;
-      color: white;
-      text-decoration: none;
+  
+    .header,
+    .footer,
+    .menu ul {
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
     }
-    
-    .footer-logo img {
-      margin: 30px auto;
-      max-width: 100px;
+  
+    .hero {
+      flex-direction: column;
+      height: auto;
+      padding: 40px 20px;
     }
-    
-    .footer-links {
-      list-style: none;
-      padding: 0;
+  
+    .big-text {
+      font-size: 40px;
+    }
+  
+    .poster,
+    .poster1 {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .poster__img img,
+    .poster1__img img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .poster__content,
+    .poster1__content {
+      padding-top: 20px;
+      margin-left: 0 !important;
+    }
+  
+    .box {
+      width: 95%;
+      padding: 20px;
+    }
+  
+    .box h2 {
+      font-size: 1.5em;
+    }
+  
+    .box p {
+      font-size: 1em;
+    }
+  
+    .box button {
+      font-size: 1em;
+    }
+  
+    /* Bottoni a stella */
+    .stella-btn {
+      width: 90%;
+      position: static;
       margin: 20px auto;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      font-size: 14px;
+      clip-path: none;
+      border-radius: 12px;
     }
-    
-    .footer-links a {
-      color: white;
-      text-decoration: none;
+  
+    /* Posizioni assolute annullate su mobile */
+    .pos1, .pos2, .pos3, .pos4, .pos5, .pos6,
+    .pos7, .pos8, .pos9, .pos10, .pos11, .pos12 {
+      position: static;
+      margin: 20px auto;
     }
-    
-    .footer-links a:hover {
-      text-decoration: underline;
+  
+    /* Slider */
+    .slider {
+      height: 50vh;
     }
-    
-    .footer p.copyright {
-      margin-top: 20px;
-      font-size: 13px;
-      color: white;
+  
+    .nav-button,
+    .slider-button {
+      font-size: 1.2rem;
+      padding: 0.5rem;
     }
-}
+  
+    .prev, .next {
+      left: 10px;
+      right: 10px;
+      position: absolute;
+    }
+  
+    /* Scritta linkata */
+    .scritta-linkata h1 a {
+      font-size: 36px;
+    }
+  
+  }
 
 
 .hidden-on-scroll {
